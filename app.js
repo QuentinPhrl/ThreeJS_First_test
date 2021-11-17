@@ -14,6 +14,7 @@ export default class Sketch {
         this.scene = new THREE.Scene();
 
         this.renderer = new THREE.WebGLRenderer({ antialias: true });
+        this.renderer.setPixelRatio(2)
 
         container.appendChild(this.renderer.domElement);
         this.controls = new OrbitControls(this.camera, this.renderer.domElement)
